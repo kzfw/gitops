@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- namespace.yaml
+- ../../base
+- auth/certificate.yaml
+- auth/deployment.yaml
+- auth/ingress.yaml
+- auth/service.yaml
+- discord/certificate.yaml
+- discord/deployment.yaml
+- discord/ingress.yaml
+- discord/service.yaml
+- mysql-backup/cronjob.yaml
+- chart-parser/cronjob.yaml
+images:
+- name: adhp/zdv-frontend
+  newName: adhp/frontend
+  newTag: zdv-v1.8.1699729620.43-f0b96cc
+- name: denartcc/api
+  newName: adhp/api
+  newTag: main-8163c14
+- name: denartcc/bot
+  newName: adhp/bot
+  newTag: main-89bb762
+- name: vzanartcc/auth
+  newName: adhp/auth
+  newTag: 72032a6
