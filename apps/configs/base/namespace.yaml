@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: zfw
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: zfw-dev
