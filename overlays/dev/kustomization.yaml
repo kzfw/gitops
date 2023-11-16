@@ -3,6 +3,9 @@ kind: Kustomization
 resources:
 - ../../base
 images:
+- name: adhp/frontend
+  newName: adhp/frontend
+  newTag: zfw-main-3ab346a
 - name: adhp/zdv-frontend
   newName: adhp/frontend
   newTag: zdv-main-1e26f93
