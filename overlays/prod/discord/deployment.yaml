@@ -4,7 +4,7 @@ metadata:
   labels:
     app: discord
   name: discord
-  namespace: zdv
+  namespace: zfw
 spec:
   progressDeadlineSeconds: 600
   replicas: 1

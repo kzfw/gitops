@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: chart-parser
-  namespace: zdv
+  namespace: zfw
 spec:
   concurrencyPolicy: Allow
   failedJobsHistoryLimit: 1

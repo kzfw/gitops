@@ -4,7 +4,7 @@ metadata:
   labels:
     app: auth
   name: auth
-  namespace: zdv
+  namespace: zfw
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -30,7 +30,7 @@ spec:
         env:
         - name: VATSIM_USER_INFO_FORMAT
           value: "vatsim"
-        image: vzanartcc/auth:debug
+        image: adhp/auth:debug
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3

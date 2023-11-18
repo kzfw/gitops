@@ -31,7 +31,7 @@ spec:
               bktime=$(date +%Y-%m-%d-%H-%M-%S)
               mkdir /tmp/backups
               pushd /tmp/backups
-              databases=(zdv zdvdev)
+              databases=(zfw zfwdev)
               for db in "${databases[@]}"; do
                   mysqldump -h "$MYSQL_HOST" -u "$MYSQL_USER" "$db" > "$db.sql"
               done

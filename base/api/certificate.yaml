@@ -5,6 +5,7 @@ metadata:
 spec:
   dnsNames:
   - api.zfwartcc.net
+  - api.ng.zfwartcc.net
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt

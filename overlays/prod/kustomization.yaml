@@ -12,6 +12,7 @@ resources:
 - discord/ingress.yaml
 - discord/service.yaml
 - mysql-backup/cronjob.yaml
+- mysql-backup/external-secret.yaml
 - chart-parser/cronjob.yaml
 images:
 - name: adhp/frontend
@@ -23,9 +24,6 @@ images:
 - name: denartcc/api
   newName: adhp/api
   newTag: main-8163c14
-- name: denartcc/bot
-  newName: adhp/bot
-  newTag: main-89bb762
-- name: vzanartcc/auth
+- name: adhp/auth
   newName: adhp/auth
   newTag: 72032a6
