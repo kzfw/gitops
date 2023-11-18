@@ -14,6 +14,9 @@ resources:
 - mysql-backup/cronjob.yaml
 - chart-parser/cronjob.yaml
 images:
+- name: adhp/frontend
+  newName: adhp/frontend
+  newTag: zfw-v1.8.1700351515.44-3ab346a
 - name: adhp/zdv-frontend
   newName: adhp/frontend
   newTag: zdv-v1.8.1699729620.43-f0b96cc
