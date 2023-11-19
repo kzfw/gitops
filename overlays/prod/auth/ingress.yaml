@@ -18,4 +18,4 @@ spec:
   tls:
   - hosts:
     - auth.zfwartcc.net
-    secretName: tls-auth-denartcc-org
+    secretName: tls-auth-zfwartcc-net

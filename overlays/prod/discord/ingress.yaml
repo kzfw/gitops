@@ -18,4 +18,4 @@ spec:
   tls:
   - hosts:
     - discord.zfwartcc.net
-    secretName: tls-discord-denartcc-org
+    secretName: tls-discord-zfwartcc-net

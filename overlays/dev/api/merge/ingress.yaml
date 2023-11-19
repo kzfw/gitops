@@ -20,4 +20,4 @@ spec:
   tls:
   - hosts:
     - api.dev.zfwartcc.net
-    secretName: api-denartcc-org-tls
+    secretName: api-zfwartcc-net-tls

@@ -20,4 +20,4 @@ spec:
   tls:
   - hosts:
     - www.dev.zfwartcc.net
-    secretName: www-denartcc-org-tls
+    secretName: www-zfwartcc-net-tls

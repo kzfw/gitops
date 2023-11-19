@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: api-denartcc-org-tls
+  name: api-zfwartcc-net-tls
 spec:
   dnsNames:
   - api.zfwartcc.net
@@ -9,4 +9,4 @@ spec:
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
-  secretName: api-denartcc-org-tls
+  secretName: api-zfwartcc-net-tls
