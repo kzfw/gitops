@@ -5,6 +5,7 @@ resources:
 - ../../base
 - auth/certificate.yaml
 - auth/deployment.yaml
+- auth/external-secrets.yaml
 - auth/ingress.yaml
 - auth/service.yaml
 - discord/certificate.yaml
