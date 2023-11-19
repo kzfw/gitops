@@ -7,9 +7,6 @@ images:
 - name: adhp/frontend
   newName: adhp/frontend
   newTag: zfw-main-443b9fc
-- name: adhp/zdv-frontend
-  newName: adhp/frontend
-  newTag: zdv-main-1e26f93
 - name: denartcc/api
   newName: adhp/api
   newTag: dev-a596810
