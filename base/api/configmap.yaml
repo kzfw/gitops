@@ -11,7 +11,7 @@ items:
         port: {{.DB_PORT | default "3306"}}
         user: {{.DB_USER | default "root"}}
         password: {{.DB_PASSWORD | default "root"}}
-        database: {{.DB_DATABASE | default "zdv"}}
+        database: {{.DB_DATABASE | default "zfw"}}
         ca_cert: {{.DB_CA_CERT | default ""}}
         automigrate: true
       discord:
@@ -57,23 +57,49 @@ items:
           discord_broadcast: true
           discord_broadcast_webhook_name: "online"
           prefixes:
-          - APA
-          - ASE
-          - BJC
-          - BKF
-          - CFO
-          - COS
-          - CPR
-          - CYS
-          - DEN
-          - EGE
-          - FMN
-          - FNL
-          - GJT
-          - GUR
-          - PUB
-          - RAP
-          - RCA
+          - REG
+          - FTW
+          - OKC
+          - SPS
+          - ABI
+          - SJT
+          - LBB
+          - MAF
+          - SHV
+          - GGG
+          - ACT
+          - LTS
+          - MLU
+          - FSI
+          - GRK
+          - DFW
+          - DAL
+          - ADS
+          - AFW
+          - NFW
+          - TKI
+          - RBD
+          - GKY
+          - FWS
+          - DTO
+          - GPM
+          - HQZ
+          - TIK
+          - PWA
+          - OUN
+          - LAW
+          - GVT
+          - GYI
+          - ADM
+          - CSM
+          - HOB
+          - DYS
+          - CNW
+          - TYR
+          - TXK
+          - DTN
+          - BAD
+          - MLU
         training_requests:
           enabled: true
           discord:
@@ -84,8 +110,8 @@ items:
           max_requests_per_user: 2
       session:
         cookie:
-          name: "{{.SESSION_NAME | default "zdv_session"}}"
-          key: "{{.SESSION_KEY | default "zdv_session"}}"
+          name: "{{.SESSION_NAME | default "zfw_session"}}"
+          key: "{{.SESSION_KEY | default "zfw_session"}}"
           max_age: 604800
           domain: "{{.SESSION_DOMAIN | default ".zfwartcc.net"}}"
           path: "/"
@@ -103,12 +129,12 @@ items:
           token: "/oauth/token"
           user: "/v1/info"
           authorize: "/oauth/authorize"
-        client_id: "{{.OAUTH_CLIENT_ID | default "zdv"}}"
-        client_secret: "{{.OAUTH_CLIENT_SECRET | default "zdv"}}"
-        my_base_URL: "{{.OAUTH_MY_BASE_URL | default "https://api.dev.zdvartcc.net" }}"
+        client_id: "{{.OAUTH_CLIENT_ID | default "zfw"}}"
+        client_secret: "{{.OAUTH_CLIENT_SECRET | default "zfw"}}"
+        my_base_URL: "{{.OAUTH_MY_BASE_URL | default "https://api.dev.zfwartcc.net" }}"
       vatusa:
-        facility: "ZDV"
-        api_key: "{{.VATUSA_API_KEY | default "zdv"}}"
+        facility: "ZFW"
+        api_key: "{{.VATUSA_API_KEY | default "zfw"}}"
         test_mode: {{.VATUSA_TEST_MODE | default false }}
       metrics:
         enabled: true

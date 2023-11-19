@@ -7,7 +7,7 @@ spec:
   fluentd: {}
   fluentbit: {}
   controlNamespace: logging
-  watchNamespaces: ['zdv','ingress-nginx']
+  watchNamespaces: ['zfw','ingress-nginx']
 ---
 apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterOutput
