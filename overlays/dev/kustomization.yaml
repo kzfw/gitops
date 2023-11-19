@@ -6,7 +6,7 @@ resources:
 images:
 - name: adhp/frontend
   newName: adhp/frontend
-  newTag: zfw-main-3ab346a
+  newTag: zfw-main-443b9fc
 - name: adhp/zdv-frontend
   newName: adhp/frontend
   newTag: zdv-main-1e26f93
