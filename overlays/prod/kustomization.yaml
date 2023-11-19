@@ -16,6 +16,9 @@ resources:
 - mysql-backup/external-secret.yaml
 - chart-parser/cronjob.yaml
 images:
+- name: adhp/auth
+  newName: adhp/auth
+  newTag: 72032a6
 - name: adhp/frontend
   newName: adhp/frontend
   newTag: zfw-v1.8.1700351515.44-3ab346a
@@ -24,7 +27,4 @@ images:
   newTag: zdv-v1.8.1699729620.43-f0b96cc
 - name: denartcc/api
   newName: adhp/api
-  newTag: main-8163c14
-- name: adhp/auth
-  newName: adhp/auth
-  newTag: 72032a6
+  newTag: main-0d111b1
