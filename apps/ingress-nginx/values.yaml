@@ -6,9 +6,9 @@ ingress-nginx:
       compute-full-forwarded-for: "true"
       proxy-body-size: 128m
       use-forwarded-headers: "true"
-      use-proxy-protocol: "true"
+      use-proxy-protocol: "false"
     service:
       type: LoadBalancer
       annotations:
-        service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
+        service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "false"
         service.beta.kubernetes.io/do-loadbalancer-tls-passthrough: "true"
