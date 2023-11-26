@@ -11,5 +11,3 @@ mysql:
       limits:
         memory: 1024Mi
         cpu: 250m
-    persistence:
-      size: 25Gi
