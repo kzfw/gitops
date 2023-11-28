@@ -1,27 +1,32 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- external-secret.yaml
-- ../../base
-- auth/certificate.yaml
-- auth/deployment.yaml
-- auth/external-secrets.yaml
-- auth/ingress.yaml
-- auth/service.yaml
-- discord/certificate.yaml
-- discord/deployment.yaml
-- discord/ingress.yaml
-- discord/service.yaml
-- mysql-backup/cronjob.yaml
-- mysql-backup/external-secret.yaml
-- chart-parser/cronjob.yaml
+  - external-secret.yaml
+  - ../../base
+  - auth/certificate.yaml
+  - auth/deployment.yaml
+  - auth/external-secrets.yaml
+  - auth/ingress.yaml
+  - auth/service.yaml
+  - discord/certificate.yaml
+  - discord/deployment.yaml
+  - discord/ingress.yaml
+  - discord/service.yaml
+  - mysql-backup/cronjob.yaml
+  - mysql-backup/external-secret.yaml
+  - chart-parser/cronjob.yaml
+patchesStrategicMerge:
+  - api/merge/certificate.yaml
+  - api/merge/ingress.yaml
+  - frontend/merge/certificate.yaml
+  - frontend/merge/ingress.yaml
 images:
-- name: adhp/auth
-  newName: adhp/auth
-  newTag: 72032a6
-- name: adhp/frontend
-  newName: adhp/frontend
-  newTag: zfw-v1.8.1701133103.45-6552ca9
-- name: denartcc/api
-  newName: adhp/api
-  newTag: main-0d111b1
+  - name: adhp/auth
+    newName: adhp/auth
+    newTag: 72032a6
+  - name: adhp/frontend
+    newName: adhp/frontend
+    newTag: zfw-v1.8.1701133103.45-6552ca9
+  - name: denartcc/api
+    newName: adhp/api
+    newTag: main-0d111b1
