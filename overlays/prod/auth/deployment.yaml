@@ -29,7 +29,7 @@ spec:
             optional: false
         env:
         - name: VATSIM_USER_INFO_FORMAT
-          value: "zan"
+          value: "vatsim"
         image: adhp/auth:debug
         imagePullPolicy: Always
         livenessProbe:
