@@ -4,9 +4,8 @@ metadata:
   name: www-zfwartcc-net-tls
 spec:
   dnsNames:
-  - www.zfwartcc.net
-  - zfwartcc.net
-  - new.zfwartcc.net
+    - www.zfwartcc.net
+    - zfwartcc.net
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt

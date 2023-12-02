@@ -15,9 +15,6 @@ resources:
   - mysql-backup/cronjob.yaml
   - mysql-backup/external-secret.yaml
   - chart-parser/cronjob.yaml
-patchesStrategicMerge:
-  - api/merge/certificate.yaml
-  - frontend/merge/certificate.yaml
 images:
   - name: adhp/auth
     newName: adhp/auth

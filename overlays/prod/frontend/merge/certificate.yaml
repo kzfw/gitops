@@ -1,7 +1,0 @@
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: www-zfwartcc-net-tls
-spec:
-  dnsNames:
-    - www.zfwartcc.net
