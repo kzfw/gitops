@@ -4,4 +4,4 @@ metadata:
   name: api-zfwartcc-net-tls
 spec:
   dnsNames:
-    - api.next.zfwartcc.net
+    - api.zfwartcc.net

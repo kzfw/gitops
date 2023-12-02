@@ -4,8 +4,7 @@ metadata:
   name: api-zfwartcc-net-tls
 spec:
   dnsNames:
-  - api.zfwartcc.net
-  - api.ng.zfwartcc.net
+    - api.zfwartcc.net
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
