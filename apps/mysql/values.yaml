@@ -6,10 +6,8 @@ mysql:
   primary:
     resources:
       requests:
-        memory: 512Mi
-        cpu: 250m
+        memory: 256Mi
       limits:
         memory: 1024Mi
-        cpu: 250m
     persistence:
       size: 15Gi
