@@ -3,10 +3,9 @@ kind: Kustomization
 metadata:
   name: configs
 resources:
-- base/argocd-ingress.yaml
-- base/argocd-rbac-cm.yaml
-- base/cert-manager-ClusterIssuer.yaml
-- base/cert-manager-clusterissuer-external-secret.yaml
-- base/external-secret-clustersecretstore.yaml
-- base/logging.yaml
-- base/namespace.yaml
+  - base/argocd-ingress.yaml
+  - base/argocd-rbac-cm.yaml
+  - base/cert-manager-ClusterIssuer.yaml
+  - base/cert-manager-clusterissuer-external-secret.yaml
+  - base/external-secret-clustersecretstore.yaml
+  - base/namespace.yaml
