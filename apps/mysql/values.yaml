@@ -6,7 +6,7 @@ mysql:
   primary:
     configuration: |-
       [mysqld]
-      disable_bin_log
+      disable_log_bin
       default_authentication_plugin={{- .Values.auth.defaultAuthenticationPlugin | default "mysql_native_password" }}
       skip-name-resolve
       explicit_defaults_for_timestamp
