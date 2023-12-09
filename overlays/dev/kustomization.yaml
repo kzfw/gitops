@@ -9,7 +9,7 @@ images:
   newTag: zfw-main-84f9c59
 - name: denartcc/api
   newName: adhp/api
-  newTag: dev-a596810
+  newTag: dev-157642d
 patchesStrategicMerge:
 - api/merge/certificate.yaml
 - api/merge/ingress.yaml
