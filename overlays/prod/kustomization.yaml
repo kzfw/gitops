@@ -24,4 +24,4 @@ images:
   newTag: zfw-v1.8.1702105109.50-84f9c59
 - name: denartcc/api
   newName: adhp/api
-  newTag: main-e8d24df
+  newTag: main-d03fea6
