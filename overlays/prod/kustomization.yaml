@@ -21,7 +21,7 @@ images:
   newTag: 72032a6
 - name: adhp/frontend
   newName: adhp/frontend
-  newTag: zfw-v1.8.1702105109.50-84f9c59
+  newTag: zfw-v1.8.1702266690.51-078a58d
 - name: denartcc/api
   newName: adhp/api
   newTag: main-d03fea6
