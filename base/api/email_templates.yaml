@@ -12,7 +12,7 @@ data:
 
       <p>This is a warning that you have not yet controlled the minimum number of hours during the activity as
       required by the Fort Worth ARTCC Facility Administrative Policy.  Per the policy, controllers must control 
-      no less than 2 hours per 2 month period.</p>
+      no less than 3 hours per calendar quarter.</p>
 
       <p>If, on the first of the month, this requirement is not met, you will be marked inactive and are subject to
       removal from the roster. If you are unable to meet this requirement, please contact the Senior Staff to request
@@ -35,11 +35,8 @@ data:
       Dear {{.FirstName}} {{.LastName}},
 
       <p>This is an email notification to inform you that you have not met the minimum activity requirements as set forth
-      by the Fort Worth ARTCC Facility Administrative Policy.  Per the policy, controllers must control no less than 2
-      hours per 2 month period. You have been marked inactive on the roster and are subject to removal for Inactivity.</p>
-
-      <p>If you require a Leave of Absense, please contact the Senior Staff as soon as possible. They may be contacted by
-      emailing management@zfwartcc.net.</p>
+      by the Fort Worth ARTCC Facility Administrative Policy.  Per the policy, controllers must control no less than 3
+      hours per calendar quarter. You have been marked inactive on the roster and are subject to removal for Inactivity.</p>
 
       <p>Thanks,<br>
       {{- range $atm := findRole "atm" -}}
@@ -83,18 +80,18 @@ data:
       <p>This email is to notify you that you have been added to the Fort Worth ARTCC Visiting Controller Roster.</p>
 
       <p>We are thrilled to welcome you to Fort Worth ARTCC on VATSIM, home to some of the most exciting airports in North America.
-      With Fort Worth International Airport being the second-largest airport globally by area, Telluride Regional Airport known as 
-      the highest commercial airport in North America, and Eagle County Airport being one of the most extreme airports worldwide, 
-      we're sure you'll have a fantastic experience.</p>
+      With Fort Worth International Airport being our major airport, American Airlines busiest hub, and many other airports such as Dallas-Love and Oklahoma City,
+      in addition to our unique training program, we are confident you will enjoy your time in Texas!</p>
 
       <p>To get started, please visit our website at https://zfwartcc.net and log in using your VATSIM account. Our primary 
-      communication platform is Discord, so if you don't already have it, please download it from this link. After downloading, 
-      join our Discord server here: https://vats.im/zdvdiscord, and then link your Discord account to your ZDV 
-      account by visiting https://discord.zfwartcc.net.</p>
+      communication platforms are Discord and Teamspeak, so if you don't already have it, please download it from this link. After downloading, 
+      join our Discord server here: https://vats.im/zfwdiscord, and then link your Discord account to your ZFW 
+      account by visiting https://discord.zfwartcc.net. You may join our Teamspeak (primary for voice comms) via the following server address: ts.zfwartcc.net and password: zfwRocks!</p>
 
       <p>Next, please review the Fort Worth ARTCC Policies by visiting our website at https://zfwartcc.net.</p>
 
-      <p>Lastly, when you are ready, please visit https://www.picktime.com/vzdv to begin scheduling your visitor checkout.</p>
+      <p>Lastly, when you are ready, please visit the #training channel in Discord to request training. Please ensure you fully read the training policy
+      prior to requesting training</p>
 
       <p>We look forward to controlling with you and hope to see you soon!<br>
       {{- range $atm := findRole "atm"  -}}
