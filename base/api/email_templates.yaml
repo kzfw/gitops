@@ -6,7 +6,7 @@ data:
   inactive_warning.tmpl: |
     Subject: You are about to be inactive
     BCC:
-    - seniorstaff@zfwartcc.net
+    - management@zfwartcc.net
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
@@ -16,7 +16,7 @@ data:
 
       <p>If, on the first of the month, this requirement is not met, you will be marked inactive and are subject to
       removal from the roster. If you are unable to meet this requirement, please contact the Senior Staff to request
-      a leave of absense. They may be contacted by emailing seniorstaff@zfwartcc.net.</p>
+      a leave of absense. They may be contacted by emailing management@zfwartcc.net.</p>
 
       <p>Thanks,<br>
       {{- range $atm := findRole "atm"  -}}
@@ -30,7 +30,7 @@ data:
   inactive.tmpl: |
     Subject: You are inactive
     BCC:
-    - seniorstaff@zfwartcc.net
+    - management@zfwartcc.net
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
@@ -39,7 +39,7 @@ data:
       hours per 2 month period. You have been marked inactive on the roster and are subject to removal for Inactivity.</p>
 
       <p>If you require a Leave of Absense, please contact the Senior Staff as soon as possible. They may be contacted by
-      emailing seniorstaff@zfwartcc.net.</p>
+      emailing management@zfwartcc.net.</p>
 
       <p>Thanks,<br>
       {{- range $atm := findRole "atm" -}}
@@ -53,13 +53,13 @@ data:
   visiting_rejected.tmpl: |
     Subject: Your visiting controller request has been rejected
     BCC:
-    - seniorstaff@zfwartcc.net
+    - management@zfwartcc.net
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
       <p>This email is to notify you that your request to join the Fort Worth ARTCC Visiting Controller Roster has been
       rejected. If you feel this was done in error, please reach out to the Fort Worth ARTCC Senior Staff by emailing
-      seniorstaff@zfwartcc.net.</p>
+      management@zfwartcc.net.</p>
 
       <p>The general reason applications are rejected are due to you not meeting the minimum requirements as listed on the
       website.</p>
@@ -76,7 +76,7 @@ data:
   visiting_added.tmpl: |
     Subject: You have been added to the visiting controller roster
     BCC:
-    - seniorstaff@zfwartcc.net
+    - management@zfwartcc.net
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
@@ -108,12 +108,12 @@ data:
   visiting_removed.tmpl: |
     Subject: You have been removed from the visiting controller roster
     BCC:
-    - seniorstaff@zfwartcc.net
+    - management@zfwartcc.net
     Body: |
       Dear {{.FirstName}} {{.LastName}}
 
       <p>This is notification that you have been removed from the Fort Worth ARTCC Visiting Controller Roster. If you feel this
-      was done in error, please reach out to the Fort Worth ARTCC Senior Staff by emailing seniorstaff@zfwartcc.net.</p>
+      was done in error, please reach out to the Fort Worth ARTCC Senior Staff by emailing management@zfwartcc.net.</p>
 
       <p>Regards,<br>
       {{- range $atm := findRole "atm"  -}}
