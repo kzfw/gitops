@@ -6,7 +6,7 @@ resources:
 images:
 - name: adhp/frontend
   newName: adhp/frontend
-  newTag: zfw-main-d0338f7
+  newTag: zfw-main-4459ee2
 - name: denartcc/api
   newName: adhp/api
   newTag: dev-0ad4d90
