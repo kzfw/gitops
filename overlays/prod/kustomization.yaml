@@ -1,19 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- external-secret.yaml
 - ../../base
 - auth/certificate.yaml
 - auth/deployment.yaml
-- auth/external-secrets.yaml
 - auth/ingress.yaml
 - auth/service.yaml
 - discord/certificate.yaml
 - discord/deployment.yaml
 - discord/ingress.yaml
 - discord/service.yaml
-- mysql-backup/cronjob.yaml
-- mysql-backup/external-secret.yaml
 - chart-parser/cronjob.yaml
 images:
 - name: adhp/auth
