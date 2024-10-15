@@ -17,6 +17,13 @@ spec:
       - name: config
         image: denartcc/api:fe44c92
         imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+          limits:
+            cpu: 250m
+            memory: 250Mi
         env:
         - name: CONFIGMAP_PATH
           value: /tmp/config-map/config.yaml
