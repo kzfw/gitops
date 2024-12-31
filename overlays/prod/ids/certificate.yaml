@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ids-zfwartcc-net
+spec:
+  dnsNames:
+    - ids.zfwartcc.net
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt
+  secretName: tls-ids-zfwartcc-net

@@ -1,0 +1,187 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ids-config
+  namespace: zan
+data:
+  config.yaml: |
+    cache:
+      driver: memory # supports memory or redis
+      host: localhost # redis host
+      port: 6379 # redis port
+      password: "" # redis password
+      db: 0 # redis database
+      default_expiration: # set default expiration, in seconds for different types
+        airports: 3600 # 1 hour, airport cache (includes METARs, TAFs, SIA, etc.)
+        charts: 86400 # 1 day, chart cache
+
+    database:
+      driver: mysql # supports mysql and postgres
+      host: "" # database host
+      port: 0 # database port
+      username: "" # database username
+      password: "" # database password
+      database_name: idsv2 # database name
+      auto_migrate: true # auto migrate database on startup
+      CACert: "" # path to CA certificate for TLS connection
+
+    facility:
+      identifier: ZFW # FAA Facility Identifier
+      name: Fort Worth ARTCC # Facility Name
+      adh: # ADH Partnership configuration
+        api_base: https://api.zfwartcc.net # Base URL for ADH API
+        rostered: true # Allow only rostered controllers
+
+    oauth:
+      Provider: adh # OAuth Provider, supports adh or vatsim
+      base_url: https://auth.zfwartcc.net # Base URL for OAuth Provider
+      client_id: ids # OAuth Client ID
+      client_secret: ids # OAuth Client Secret
+      my_base_url: https://ids.zfwartcc.net # Base URL for this application
+      endpoints: # OAuth Endpoints
+        authorize: /oauth/authorize # OAuth Authorize
+        token: /oauth/token # OAuth Token
+        userinfo: /v1/info # OAuth Userinfo
+
+    server:
+      ip: "" # IP to bind to (if needed, leave empty if not)
+      port: 3000 # Port to listen on
+      mode: h2c # Server mode, supports plain, https (h2), h2c
+      # for https, expects SSL_CERT and SSL_KEY env vars to be set
+
+    session:
+      hash_key: "" # Session Hash Key
+      block_key: "" # Session Block Key
+      name: ids # Session Name
+      domain: .zfwartcc.net # Session Domain
+      path: / # Session Path
+      max_age: 86400 # Session Max Age, in seconds
+      secure: false # Session Secure
+      http_only: true # Session HTTP Only
+  airports.json: |
+    [
+      "ABI",
+      "ACT",
+      "ADH",
+      "ADM",
+      "ADS",
+      "AFW",
+      "AGO",
+      "ASL",
+      "ATA",
+      "AXS",
+      "BAD",
+      "BFE",
+      "BKD",
+      "BPG",
+      "BQP",
+      "BWD",
+      "CDH",
+      "CDS",
+      "CHK",
+      "CLK",
+      "CNW",
+      "COM",
+      "CPT",
+      "CRS",
+      "CSM",
+      "CWC",
+      "DAL",
+      "DEQ",
+      "DFW",
+      "DTN",
+      "DTO",
+      "DUA",
+      "DUC",
+      "DYS",
+      "ELD",
+      "ELK",
+      "ETN",
+      "FDR",
+      "FSI",
+      "FTW",
+      "FWS",
+      "GDJ",
+      "GGG",
+      "GKY",
+      "GLE",
+      "GNC",
+      "GOK",
+      "GPM",
+      "GRK",
+      "GVT",
+      "GYI",
+      "GZL",
+      "GZN",
+      "HBR",
+      "HHW",
+      "HLR",
+      "HMY",
+      "HOB",
+      "HQZ",
+      "HSD",
+      "ILE",
+      "INJ",
+      "INK",
+      "JDD",
+      "JSO",
+      "JWY",
+      "JXI",
+      "LAW",
+      "LBB",
+      "LIU",
+      "LLN",
+      "LNC",
+      "LTS",
+      "LUD",
+      "LUV",
+      "LXY",
+      "LZZ",
+      "MAF",
+      "MDD",
+      "MKN",
+      "MKO",
+      "MLC",
+      "MLU",
+      "MNE",
+      "MNZ",
+      "MWL",
+      "NFW",
+      "ODO",
+      "OJA",
+      "OKC",
+      "ONY",
+      "OSA",
+      "OUN",
+      "PRX",
+      "PSN",
+      "PVJ",
+      "PVW",
+      "PWA",
+      "PWG",
+      "RBD",
+      "RCE",
+      "RFI",
+      "RPH",
+      "RQO",
+      "RSN",
+      "SEP",
+      "SHV",
+      "SJT",
+      "SLR",
+      "SNK",
+      "SNL",
+      "SPH",
+      "SPS",
+      "SRE",
+      "SWI",
+      "SWW",
+      "TIK",
+      "TKI",
+      "TPL",
+      "TRL",
+      "TXK",
+      "TYR",
+      "WEA",
+      "XBP"
+    ]

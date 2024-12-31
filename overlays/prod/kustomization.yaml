@@ -11,6 +11,13 @@ resources:
 - discord/ingress.yaml
 - discord/service.yaml
 - chart-parser/cronjob.yaml
+- ids/certificate.yaml
+- ids/configmap.yaml
+- ids/deployment-backend.yaml
+- ids/deployment-frontend.yaml
+- ids/ingress.yaml
+- ids/service-backend.yaml
+- ids/service-frontend.yaml
 images:
 - name: adhp/auth
   newName: adhp/auth
