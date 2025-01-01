@@ -21,7 +21,7 @@ data:
       port: 0 # database port
       username: "" # database username
       password: "" # database password
-      database_name: idsv2 # database name
+      database_name: kzfw # database name
       auto_migrate: true # auto migrate database on startup
       CACert: "" # path to CA certificate for TLS connection
 
