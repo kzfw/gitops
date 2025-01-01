@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ids-config
-  namespace: zan
+  namespace: zfw
 data:
   config.yaml: |
     cache:
