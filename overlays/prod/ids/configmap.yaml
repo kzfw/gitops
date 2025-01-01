@@ -56,7 +56,7 @@ data:
       domain: .zfwartcc.net # Session Domain
       path: / # Session Path
       max_age: 86400 # Session Max Age, in seconds
-      secure: false # Session Secure
+      secure: true # Session Secure
       http_only: true # Session HTTP Only
   airports.json: |
     [
