@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ids
+  namespace: zfw
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ids.zfwartcc.net
+      http:
+        paths:
+          - backend:
+              service:
+                name: ids-backend
+                port:
+                  number: 3000
+            path: /v1
+            pathType: Prefix
+          - backend:
+              service:
+                name: ids-backend
+                port:
+                  number: 3000
+            path: /signalr
+            pathType: Prefix
+          - backend:
+              service:
+                name: ids-frontend
+                port:
+                  number: 8080
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - ids.zfwartcc.net
+      secretName: tls-ids-zfwartcc-net
