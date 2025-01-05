@@ -82,6 +82,8 @@ spec:
               value: "ALL"
             - name: DB_TABLE
               value: "charts"
+            - name: FORCE
+              value: true
             image: adhp/chart-parser:latest
             imagePullPolicy: Always
             resources:
