@@ -12,6 +12,31 @@ spec:
       labels:
         app: ids-backend
     spec:
+      initContainers:
+        - name: init-update
+          image: adhp/ids-backend:zfw-main-267a56c
+          imagePullPolicy: Always
+          command: ["/api"]
+          args:
+            - update
+            - --config
+            - /app/configs/config.yaml
+            - --airports
+            - /app/configs/airports.json
+          envFrom:
+            - secretRef:
+                name: secret-ids
+                optional: false
+          resources:
+            requests:
+              cpu: 20m
+              memory: 50Mi
+            limits:
+              cpu: 100m
+              memory: 512Mi
+          volumeMounts:
+            - name: config-volume
+              mountPath: /app/configs
       containers:
         - name: api
           image: adhp/ids-backend:zfw-main-267a56c
