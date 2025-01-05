@@ -37,3 +37,69 @@ spec:
   schedule: 1 9 * * *
   successfulJobsHistoryLimit: 3
   suspend: false
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ids-chart-parser
+  namespace: zfw
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - envFrom:
+            - secretRef:
+                name: secret-ids
+                optional: false
+            env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  key: DATABASE__HOST
+                  name: secret-ids
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  key: DATABASE__PORT
+                  name: secret-ids
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  key: DATABASE__USERNAME
+                  name: secret-ids
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: DATABASE__PASSWORD
+                  name: secret-ids
+            - name: DB_DATABASE
+              value: "kzfw-ids"
+            - name: STATES
+              value: "ALL"
+            - name: DB_TABLE
+              value: "charts"
+            - name: FORCE
+              value: "test"
+            image: adhp/chart-parser:latest
+            imagePullPolicy: Always
+            resources:
+              requests:
+                cpu: 50m
+                memory: 50Mi
+              limits:
+                cpu: 250m
+                memory: 250Mi
+            name: chart-parser
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          dnsPolicy: ClusterFirst
+          restartPolicy: OnFailure
+          schedulerName: default-scheduler
+          terminationGracePeriodSeconds: 30
+  schedule: 30 9 * * *
+  successfulJobsHistoryLimit: 3
+  suspend: false
