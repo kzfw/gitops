@@ -1,0 +1,24 @@
+import { z } from 'zod';
+
+export const time = z.object({
+	hour: z.coerce.number().min(0).max(48),
+	minute: z.coerce.number().min(0).max(59)
+});
+
+export const dayAvailability = z.object({
+	available: z.coerce.boolean(),
+	start: time,
+	end: time
+});
+
+export const availSchema = z.object({
+	timezone: z.string(),
+	sunday: dayAvailability,
+	monday: dayAvailability,
+	tuesday: dayAvailability,
+	wednesday: dayAvailability,
+	thursday: dayAvailability,
+	friday: dayAvailability,
+	saturday: dayAvailability,
+	exceptions: z.record(z.string(), dayAvailability)
+});
