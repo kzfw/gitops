@@ -27,10 +27,10 @@ images:
   newTag: zfw-v1.9.1734395786.81-9ce18b5
 - name: adhp/ids-backend
   newName: docker.io/adhp/ids-backend
-  newTag: zfw-main-8965a26
+  newTag: zfw-main-22b77c5
 - name: adhp/ids-frontend
   newName: docker.io/adhp/ids-frontend
-  newTag: zfw-main-8965a26
+  newTag: zfw-main-22b77c5
 - name: denartcc/api
   newName: adhp/api
   newTag: main-8714ede
