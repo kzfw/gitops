@@ -33,4 +33,4 @@ images:
   newTag: zfw-main-22b77c5
 - name: denartcc/api
   newName: adhp/api
-  newTag: main-1045fcd
+  newTag: main-21bcc39
