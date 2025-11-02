@@ -24,7 +24,7 @@ images:
   newTag: 72032a6
 - name: adhp/frontend
   newName: adhp/frontend
-  newTag: zfw-v1.9.1751642977.86-e7756ba
+  newTag: zfw-v1.9.1762112896.88-87fd9da
 - name: adhp/ids-backend
   newName: docker.io/adhp/ids-backend
   newTag: zfw-main-22b77c5
